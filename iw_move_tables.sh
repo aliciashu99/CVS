@@ -1,5 +1,22 @@
 #!/bin/bash
 
+usage ()
+{
+  echo 'Usage : ./iw_move_tables.sh'
+  echo '--sourcedb <Hive DB name> '
+  echo '--table <Optional: Hive table name. If not specified use ALL> '
+  echo '--destinationdb <Optional. If not specified use source db name>'
+  echo '--sourcedir <Directory where tables are located>' 
+  echo '--destinationdir <Directory where tables are located after the move>'
+  echo '--run <run script> true (Default: false)'
+  exit
+}
+
+if [ "$#" -le 1 ]
+then
+    usage
+fi
+
 RUN=false
 while [[ $# -gt 1 ]]
 do
