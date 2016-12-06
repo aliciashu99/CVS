@@ -1,0 +1,12 @@
+declare 
+  prescrip_id number(20);
+begin
+  FOR i IN 1..1000 LOOP
+    prescrip_id := dbms_random.value(1, 100000);
+    update PHARMACY_CLAIM set description='Version 2.0', update_date=SYSDATE where prescription_id=prescrip_id;
+  END LOOP;
+  commit;
+end;
+
+select count(*) from PHARMACY_CLAIM where description='Version 2.0';
+
