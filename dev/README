@@ -1,0 +1,8 @@
+
+1. Run java program (Main) to generate a csv file
+2. Create a table in Oracle
+3. Load the table with the generated csv file in step 1
+4. Create a source in Infoworks UI 
+5. Ingest the data into the source
+6. Run CDC
+7. Run merge
