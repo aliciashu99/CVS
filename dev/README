@@ -1,8 +1,22 @@
+This is the README on how to load data into an Oracle table and run Infoworks data ingetstion.
+
+  
+Prerequsites: 
+   Install SQLDeveloper or other Oracle clients that can talk to Oracle server
+   Install Infoworks product
+
+
+
+Steps to load data in Oralce and run cdc & merge in Infoworks UI:
 
 1. Run java program (Main) to generate a csv file
 2. Create a table in Oracle
-3. Load the table with the generated csv file in step 1
-4. Create a source in Infoworks UI 
-5. Ingest the data into the source
-6. Run CDC
-7. Run merge
+3. Use SQL Developer and goto the created table.  
+4. Right click on the table and choose "Import Data...."
+5. Follow the instructions on the UI to load the csv file and import the data. 
+6. Create a source in Infoworks UI 
+7. Ingest the data into the created source using Infoworks UI
+8. Run update statements or script in Oracle to update the table.
+9. Run CDC from Infoworks UI
+10. Run Merge from Infoworks UI
+
